@@ -222,13 +222,17 @@ ggplot(sdr_data, aes(x = goal_12_score,
         - which country(s) are outliers?
         
 ```{r}
-cool_challenge_1 <- ggplot(sdr_data, aes(x = goal_13_score, 
-                     y = goal_7_score, label = country)) +
+cool_challenge_1 <- ggplot(sdr_data, aes(x = goal_15_score, 
+                     y = goal_5_score, label = country)) +
   geom_point() +
   geom_smooth() +
   stat_cor() +
   theme_minimal() 
 
-ggploty(cool_challenge_1)
+ggplotly(cool_challenge_1)
 ```
 
+Somewhat positive correlation between Goal 15, Life on Land, & Goal 5, Gender Equality.
+As more efforts went into preserving sustainable efforts on land, higher percentages of women may have gotten involved.
+Relevant initiatives possibly created more jobs, attracting higher levels of interest from women versus men. 
+Slight deviation in correlation could be due to varying interests in certain projects. 
