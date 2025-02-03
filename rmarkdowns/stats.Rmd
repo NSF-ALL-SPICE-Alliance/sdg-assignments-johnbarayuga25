@@ -220,3 +220,15 @@ ggplot(sdr_data, aes(x = goal_12_score,
       - are there any points that don't follow the trend (outliers)
         
         - which country(s) are outliers?
+        
+```{r}
+cool_challenge_1 <- ggplot(sdr_data, aes(x = goal_13_score, 
+                     y = goal_7_score, label = country)) +
+  geom_point() +
+  geom_smooth() +
+  stat_cor() +
+  theme_minimal() 
+
+ggploty(cool_challenge_1)
+```
+
