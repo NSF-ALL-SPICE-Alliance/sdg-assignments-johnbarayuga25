@@ -290,7 +290,7 @@ mytext <- paste(
 leaflet(sdr_data_world_joined) %>% 
   addTiles()  %>% 
   setView( lat=10, lng=0 , zoom=2) %>%
-  addPolygons(stroke = FALSE, fillOpacity = 0.5, smoothFactor = 0.5, color = ~colorQuantile("Spectral", goal_2_score)(goal_2_score), label = mytext)
+  addPolygons(stroke = FALSE, fillOpacity = 0.5, smoothFactor = 0.5, color = ~colorQuantile("RdYlBu", goal_2_score)(goal_2_score), label = mytext)
 ```
 
 
