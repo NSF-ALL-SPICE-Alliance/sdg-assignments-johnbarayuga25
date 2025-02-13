@@ -235,7 +235,13 @@ You can view the countries and their assigned cluster in a dataframe with the co
 country_clusters <- as.data.frame(k2$cluster)
 ```
 
+```{r}
+k2 <- kmeans(sdr_data_imputed, centers = 3)
+```
 
+```{r}
+fviz_cluster(k2, data = sdr_data_imputed) + theme_minimal()
+```
 
 
 ### Random Forest Regression
@@ -332,6 +338,11 @@ plotPartial(pd)
 #### <span style="color: red;">Challenge 1</span>
 
 Edit this code chunk `k2 <- kmeans(sdr_data_imputed, centers = 2)` under the silhouette plot to increase the number of clusters
+ - started on line 238
+
+```{r}
+
+```
 
 - Then, run the code chunk `fviz_cluster(k2, data = sdr_data_imputed) + theme_minimal()` to see the new visualization with the increased number of clusters
   
@@ -345,6 +356,9 @@ Edit this code chunk `rf_matmort <- randomForest(normalized_score_sdg3_matmort ~
     
     - *Hint* make sure to continue replacing rf_matmort with the new name you assign your random forest model
 
+```{r}
+rf_obesity <- randomForest(normalized_score_sdg2_obesity ~ ., data = sdr_data_imputed, importance = TRUE)
+```
 
 
 
